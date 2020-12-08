@@ -1,0 +1,21 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, thanks for trying this out!
+
+tasks:
+  default:
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
+  init:
+    cmds:
+      - go get
+      - go mod tidy
+    dir: v1
+  run:
+    cmds:
+      - go run main.go
+    dir: v1
