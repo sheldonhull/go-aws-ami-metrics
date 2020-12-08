@@ -4,6 +4,7 @@ version: '3'
 
 vars:
   GREETING: Hello, thanks for trying this out!
+  AWS_PROFILE: qa # <--- REPLACE WITH WHATEVER YOU WANT TO RUN AGAINST
 
 tasks:
   default:
@@ -17,5 +18,5 @@ tasks:
     dir: v1
   run:
     cmds:
-      - go run main.go
+      - go run main.go -profile qa
     dir: v1
