@@ -1,0 +1,38 @@
+{
+   "dependencyDashboard":true,
+   "dependencyDashboardAutoclose":true,
+   "assignAutomerge":true,
+   "reviewersFromCodeOwners":true,
+   "semanticCommitType": "ci(deps)",
+   "rebaseWhen":"behind-base-branch",
+   "prCreation":"not-pending",
+   "stabilityDays":14,
+   "gomod":{
+      "enabled":true
+   },
+   "docker":{
+      "enabled":true
+   },
+   "vulnerabilityAlerts":{
+      "enabled":true,
+      "labels":[
+         "security"
+      ]
+   },
+   "extends":[
+      "schedule:earlyMondays"
+   ],
+   "packageRules":[
+      {
+         "updateTypes":[
+            "patch"
+         ],
+         "matchUpdateTypes": ["minor", "patch"],
+         "matchCurrentVersion": "!/^0/",
+         "automerge":true
+      }
+   ],
+   "assignees":[
+      "sheldonhull"
+   ]
+}
